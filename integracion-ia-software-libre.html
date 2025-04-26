@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <title>Integración de IA con Software Libre - FLISoL Quito</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.3.1/reveal.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.3.1/theme/simple.min.css"
+      id="theme"
+    />
+    <style>
+      .reveal section img.logo {
+        width: 120px;
+        position: absolute;
+        top: 10px;
+        right: 10px;
+      }
+      .reveal {
+        --color-ec-blue: #0033a0;
+        --color-ec-red: #ef3340;
+        --color-text: #1e1e1e;
+        --color-bg: #ffffff;
+        --r-heading1-size: 2.77em;
+      }
+      .reveal {
+        background: url("flisol-bg-lt.jpg");
+        background-size: cover;
+      }
+      .reveal h1,
+      .reveal h2,
+      .reveal h3,
+      .reveal p {
+        color: var(--color-text);
+      }
+      .reveal section img {
+        margin-bottom: 0;
+      }
+      .reveal figure {
+        margin: 0;
+      }
+      .reveal figcaption {
+        color: var(--color-text);
+        font-size: 0.4em;
+      }
+      .reveal img.img-half {
+        max-height: 50vh;
+        width: auto;
+        margin: 0 auto;
+      }
+      .two-columns {
+        display: flex;
+        gap: 20px; /* Space between columns */
+      }
+      .two-columns .column {
+        flex: 1; /* Equal width for both columns */
+        padding: 10px;
+      }
+      .two-columns .column-wide {
+        flex: 2; /* Wide column takes 2 parts */
+      }
+    </style>
+  </head>
+  <body>
+    <div class="reveal">
+      <div class="slides">
+        <section>
+          <h1>Integración de Inteligencia Artificial con Software Libre</h1>
+        </section>
+
+        <section>
+          <section>
+            <h2>Inteligencia Artificial y Software Libre</h2>
+            <img src="assets/ia-free-software.jpg" alt="IA y Software Libre" />
+          </section>
+          <section>
+            <h2>¿Qué es la IA?</h2>
+            <figure>
+              <img src="assets/ai-hist-timeline.jpg" alt="IA y Software Libre" />
+              <figcaption>
+                Por Tarjomyar - Trabajo propio, CC BY-SA 4.0,
+                https://commons.wikimedia.org/w/index.php?curid=158857968
+              </figcaption>
+            </figure>
+          </section>
+          <section>
+            <h2>¿Qué es la IA?</h2>
+            <ul>
+              <li>Sistemas que piensan como humanos (Ciencia cognoscitiva)</li>
+              <li>Sistemas que piensan racionalmente (Lógica)</li>
+              <li>Sistemas que actúan como humanos (Turing)</li>
+              <li>Sistemas que actúan racionalmente (Agentes)</li>
+            </ul>
+          </section>
+          <section>
+            <h2>La IA...</h2>
+            <ul>
+              <li>Se puede equivocar</li>
+              <li>Puede estar sesgada (creador/usuario)</li>
+              <li>Impacto económico/social</li>
+            </ul>
+            <figure>
+              <img
+                class="img-half"
+                src="ai-malfunction.jpg"
+                alt="IA y Software Libre"
+              />
+              <figcaption>Generated with Gemini 2.0 Flash</figcaption>
+            </figure>
+          </section>
+          <section>
+            <h2>¿Qué es el SL?</h2>
+            <ul>
+              <li>
+                Conjunto de programas
+                <ul>
+                  <li>Libertad de usar, estudiar y modificar</li>
+                  <li>Distribución libre</li>
+                  <li>Acceso al código fuente</li>
+                </ul>
+              </li>
+            </ul>
+            <figure>
+              <img
+                class="img-half"
+                src="free-software-freedoms.png"
+                alt="Free Software"
+              />
+              <figcaption>Generated with GPT-4o</figcaption>
+            </figure>
+          </section>
+          <section>
+            <h2>¿Por qué es importante su integración?</h2>
+            <ul>
+              <li>La IA está transformando el mundo</li>
+              <li>El software libre democratiza su acceso y desarrollo</li>
+            </ul>
+          </section>
+        </section>
+
+        <section>
+          <section>
+            <h2>Beneficios del SL en IA</h2>
+            <figure>
+              <img
+                class="img-half"
+                src="colab.png"
+                alt="Beneficios del SL en IA"
+              />
+              <figcaption>Generated with GPT-4o</figcaption>
+            </figure>
+          </section>
+          <section>
+            <h2>Transparencia y Auditoría</h2>
+            <ul>
+              <li>Inspeccionar los algoritmos y modelos utilizados</li>
+              <li>Identificar sesgos y errores</li>
+              <li>Mejorar la confianza en los sistemas de IA</li>
+              <li>
+                Fundamental en sectores críticos:
+                <ul>
+                  <li>Salud</li>
+                  <li>Finanzas</li>
+                  <li>Educación</li>
+                  <li>Seguridad</li>
+                </ul>
+              </li>
+            </ul>
+          </section>
+          <section>
+            <h2>Accesibilidad y Soberanía Tecnológica</h2>
+            <ul>
+              <li>
+                Reduce la dependencia de grandes corporaciones y APIs cerradas.
+              </li>
+              <li>
+                Países, comunidades y universidades pueden crear sus propios
+                sistemas inteligentes
+              </li>
+              <li>Desarrollo y aplicación de IA mas justa y equitativa</li>
+            </ul>
+          </section>
+          <section>
+            <h2>Colaboración y Comunidad</h2>
+            <ul>
+              <li>
+                Fomenta la colaboración entre desarrolladores, investigadores y
+                usuarios.
+              </li>
+              <li>
+                Contribuciones de la comunidad para mejorar modelos y
+                algoritmos.
+              </li>
+              <li>
+                Desarrollo de herramientas y librerías específicas para IA
+              </li>
+              <li>Promueve la liberación de datos: Compartir datasets.</li>
+            </ul>
+          </section>
+          <section>
+            <h2>Personalización y Adaptación</h2>
+            <ul>
+              <li>
+                Adaptar los modelos a contextos locales: idioma, cultura, datos
+                propios
+              </li>
+              <li>Competencia mas justa entre pequeñas y grandes empresas</li>
+              <li>
+                Creación de soluciones específicas para pymes y micro empresas
+              </li>
+              <li>Creación de modelos de IA para grupos minoritarios</li>
+            </ul>
+          </section>
+          <section>
+            <h2>Innovación</h2>
+            <ul>
+              <li>
+                Aceleración del desarrollo social y económico a nivel global
+              </li>
+              <li>Creación de nuevos modelos sobre modelos pre-existentes</li>
+              <li>Aplicaciones en sectores emergentes</li>
+              <li>Uso sostenible de la IA</li>
+            </ul>
+          </section>
+        </section>
+
+        <section>
+          <section>
+            <h2>Herramientas de IA Libres</h2>
+            <div class="two-columns">
+              <div class="column-wide">
+                <ul>
+                  <li>Machine Learning/Deep Learning</li>
+                  <li>Visión Computacional</li>
+                  <li>NLP</li>
+                  <li>IoT y Robótica (Agentes)</li>
+                  <li>Anonimación y Privacidad en IA</li>
+                  <li>Orquestación y automatización</li>
+                </ul>
+              </div>
+              <div class="column">
+                <figure>
+                  <img
+                    class="img-half-w"
+                    src="tools.png"
+                    alt="Herramientas de IA Libres"
+                  />
+                  <figcaption>Generated with GPT-4o</figcaption>
+                </figure>
+              </div>
+            </div>
+          </section>
+          <section>
+            <h2>Desarrollo de IA Libre</h2>
+            <div class="two-columns">
+              <div class="column-wide">
+                <ul>
+                  <li>Python</li>
+                  <li>R</li>
+                  <li>Julia</li>
+                  <li>JavaScript</li>
+                  <li>C++</li>
+                </ul>
+              </div>
+              <div class="column">
+                <figure>
+                  <img
+                    class="img-half-w"
+                    src="tools.png"
+                    alt="Herramientas de IA Libres"
+                  />
+                  <figcaption>Generated with GPT-4o</figcaption>
+                </figure>
+              </div>
+            </div>
+          </section>
+          <section>
+            <h2>Machine Learning</h2>
+            <div class="two-columns">
+              <div class="column-wide">
+                <ul>
+                  <li>PyTorch (Meta/Fb)</li>
+                  <li>TensorFlow (Google)</li>
+                  <li>Scikit-learn</li>
+                  <li>MLflow</li>
+                  <li>Apache Spark MLlib</li>
+                  <li>Kubeflow</li>
+                </ul>
+              </div>
+              <div class="column">
+                <figure>
+                  <img
+                    class="img-half-w"
+                    src="tools.png"
+                    alt="Herramientas de IA Libres"
+                  />
+                  <figcaption>Generated with GPT-4o</figcaption>
+                </figure>
+              </div>
+            </div>
+          </section>
+          <section>
+            <h2>Machine Learning</h2>
+            <ul>
+              <li>Diagnóstico médico asistido</li>
+              <li>Predicción de precios (mercado inmobiliario, acciones)</li>
+              <li>Detección de fraudes financieros</li>
+            </ul>
+          </section>
+          <section>
+            <h2>Visión Computacional</h2>
+            <ul>
+              <li>OpenCV</li>
+              <li>SimpleCV</li>
+              <li>Darknet (YOLO)</li>
+              <li>TensorFlow Object Detection API</li>
+            </ul>
+          </section>
+          <section>
+            <h2>Visión Computacional</h2>
+            <ul>
+              <li>Reconocimiento facial</li>
+              <li>Detección de objetos</li>
+              <li>Reconocimiento de texto (OCR)</li>
+              <li>Clasificación de imágenes</li>
+            </ul>
+          </section>
+          <section>
+            <h2>Procesamiento de Lenguaje Natural</h2>
+            <ul>
+              <li>NLTK</li>
+              <li>Transformers (Hugging Face)</li>
+              <li>OpenNLP</li>
+              <li>spaCy</li>
+            </ul>
+          </section>
+          <section>
+            <h2>Procesamiento de Lenguaje Natural</h2>
+            <ul>
+              <li>Chatbots</li>
+              <li>Traducción automática (LibreTranslate)</li>
+              <li>Clasificación de texto</li>
+              <li>Generación de texto</li>
+              <li>Análisis de sentimientos</li>
+            </ul>
+          </section>
+          <section>
+            <h2>Robótica</h2>
+            <ul>
+              <li>ROS (Robot Operating System)</li>
+              <li>OpenAI Gym</li>
+              <li>Gazebo</li>
+              <li>PyBullet</li>
+            </ul>
+          </section>
+          <section>
+            <h2>Robótica</h2>
+            <ul>
+              <li>Drones autónomos</li>
+              <li>Simulación de robots</li>
+              <li>Control de robots</li>
+              <li>Aprendizaje por refuerzo</li>
+              <li>Aplicaciones industriales</li>
+            </ul>
+          </section>
+          <section>
+            <h2>Anonimización y Privacidad</h2>
+            <ul>
+              <li>OpenMined</li>
+              <li>PySyft</li>
+              <li>TensorFlow Privacy</li>
+              <li>Federated Learning</li>
+            </ul>
+          </section>
+          <section>
+            <h2>Anonimización y Privacidad</h2>
+            <ul>
+              <li>Privacidad diferencial</li>
+              <li>Aprendizaje federado</li>
+              <li>Anonimización de datos</li>
+              <li>Privacidad en el entrenamiento de modelos</li>
+            </ul>
+          </section>
+          <section>
+            <h2>Orquestación y Automatización</h2>
+            <ul>
+              <li>n8n</li>
+              <li>Apache Airflow</li>
+              <li>Luigi</li>
+              <li>Prefect</li>
+              <li>Dagster</li>
+            </ul>
+          </section>
+        </section>
+
+        <section>
+          <section>
+            <h2>Desafíos en la Integración</h2>
+            <ul>
+              <li>Requiere alto poder computacional</li>
+              <li>Curva de aprendizaje técnica</li>
+              <li>Escalabilidad</li>
+              <li>Consideraciones éticas</li>
+            </ul>
+          </section>
+          <section>
+            <h2>Alto poder computacional</h2>
+            <ul>
+              <li>Modelos Pre-entrenados (Hugging Face)</li>
+              <li>Servicios de computación libre (Google Colab)</li>
+              <li>
+                Técnicas de entrenamiento eficiente como transfer learning o
+                quantization.
+              </li>
+            </ul>
+          </section>
+          <section>
+            <h2>Curva de aprendizaje técnica</h2>
+            <ul>
+              <li>Documentación local</li>
+              <li>Talleres comunitarios (FLISOL!)</li>
+              <li>
+                Usar herramientas de bajo código (como n8n, Rasa) para empezar y
+                luego profundizar.
+              </li>
+            </ul>
+          </section>
+          <section>
+            <h2>Escalabilidad y Despliegue</h2>
+            <ul>
+              <li>Uso de contenedores (Docker)</li>
+              <li>Orquestación de contenedores (Kubernetes)</li>
+              <li>Uso de servicios en la nube (OpenStack)</li>
+              <li>
+                Empezar pequeño: "Primero validar el modelo en un entorno
+                controlado"
+              </li>
+            </ul>
+          </section>
+          <section>
+            <h2>Consideraciones éticas y sesgos</h2>
+            <ul>
+              <li>Datasets con sesgos raciales, culturales o de género</li>
+              <li>Auditar los datasets antes de entrenar</li>
+              <li>
+                Usar modelos libres que explicitan método de recolección de
+                datos
+              </li>
+              <li>Diversidad en el equipo de desarrollo y testing</li>
+            </ul>
+          </section>
+        </section>
+
+        <section>
+          <section>
+            <h2>Futuro y Tendencias</h2>
+            <ul>
+              <li>IA explicable (XAI)</li>
+              <li>Aprendizaje federado abierto</li>
+              <li>Modelos accesibles y auditables</li>
+              <li>Desarrollo ético colaborativo</li>
+            </ul>
+          </section>
+          <section>
+            <h2>IA explicable (XAI)</h2>
+            <ul>
+              <li>Modelos que explican sus decisiones</li>
+              <li>Mejorar la confianza y comprensión de los usuarios</li>
+              <li>Herramientas como LIME y SHAP</li>
+            </ul>
+          </section>
+          <section>
+            <h2>Aprendizaje Federado Libre</h2>
+            <ul>
+              <li>
+                Entrenamiento usando datos distribuidos sin centralizarlos
+              </li>
+              <li>Privacidad y seguridad de los datos</li>
+              <li>PySyft, TensorFlow Federated</li>
+              <li></li>
+            </ul>
+          </section>
+          <section>
+            <h2>Modelos accesibles y auditables</h2>
+            <ul>
+              <li>Modelos pre-entrenados disponibles públicamente</li>
+              <li>Mistral, Falcon, LLaMA2 Community Edition, Whisper</li>
+            </ul>
+          </section>
+          <section>
+            <h2>Desarrollo ético colaborativo</h2>
+            <ul>
+              <li>Iniciativas de IA responsable</li>
+              <li>Colaboración entre comunidades y organizaciones</li>
+              <li>Proyectos de código abierto que promueven la ética en IA</li>
+            </ul>
+          </section>
+        </section>
+
+        <section>
+          <h2>Conclusión</h2>
+          <p>
+            El software libre potencia una IA accesible, ética y colaborativa.
+            <br />
+            ¡Tú también puedes contribuir!
+          </p>
+        </section>
+
+        <section>
+          <h2>Preguntas/Debate</h2>
+          <p>
+            ¿Qué herramientas libres usas tú?<br />¿Qué desafíos has enfrentado
+            con IA libre?
+          </p>
+        </section>
+      </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.3.1/reveal.min.js"></script>
+    <script>
+      Reveal.initialize({
+        hash: true,
+        // plugins: [RevealMarkdown, RevealHighlight, RevealNotes],
+        transition: "slide",
+        slideNumber: true,
+        history: true,
+        center: true,
+      });
+    </script>
+  </body>
+</html>
